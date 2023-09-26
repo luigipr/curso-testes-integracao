@@ -1,5 +1,5 @@
 //import app from "../src/aula-06/exercicio_quando-era-o-evento/src/app";
-import app from "../src/app";
+import app from "../src/aula-06/exercicio_quando-era-o-evento/src/app";
 import supertest from "supertest";
 
 const api = supertest(app);

@@ -1,4 +1,4 @@
-import app from "./aula-04/app";
+import app from "../../aula-04/app";
 
 const port = 6000;
 app.listen(port, () => {
