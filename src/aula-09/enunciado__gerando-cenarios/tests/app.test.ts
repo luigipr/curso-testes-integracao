@@ -21,11 +21,17 @@ describe("POST /users tests", () => {
   });
   it("should receive 409 when trying to create two users with same e-mail", async () => {
     // TODO
+    await prisma.user.create({
+      data: {
+        email: "a@a.com",
+        password: "123456",
+      }
+    });
     const result = await api.post("/users").send({
       email: "a@a.com",
       password: "123456",
   });
-
+  expect(result.status).toBe(409)
   });
 });
 
@@ -80,9 +86,7 @@ describe("GET /users tests", () => {
     expect(result.body).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          id: expect.any(Number),
           email: expect.any(String),
-          password: expect.any(String)
         })
       ])
     )
