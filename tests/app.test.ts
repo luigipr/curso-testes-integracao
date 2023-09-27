@@ -1,7 +1,7 @@
 import supertest from "supertest";
 
-import app from "../src/aula-09/enunciado__passa-repassa/app"
-import { ReservationInput } from "../src/aula-09/enunciado__passa-repassa/src/repository";
+import app from "../src/aula-08/enunciado__passa-repassa/app"
+import { ReservationInput } from "../src/aula-08/enunciado__passa-repassa/src/repository";
 
 const api = supertest(app);
 
